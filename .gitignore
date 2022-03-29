@@ -1,0 +1,11 @@
+
+# keyhac files
+dict/
+doc/
+extension/
+lib/
+theme/
+keyhac.exe
+library.zip
+python38.dll
+readme_*.txt
