@@ -27,9 +27,9 @@ keymap.setFont("ＭＳ ゴシック", 12)
 # [section-options] --------------------------------------------------------------------------------
 
 # IMEの設定（次の設定のいずれかを有効にする）
-fc.ime = "old_Microsoft_IME"
+# fc.ime = "old_Microsoft_IME"
 # fc.ime = "new_Microsoft_IME"
-# fc.ime = "Google_IME"
+fc.ime = "Google_IME"
 # fc.ime = None
 
 ####################################################################################################
@@ -39,7 +39,7 @@ fc.ime = "old_Microsoft_IME"
 
 # Emacs のキーバインドに“したくない”アプリケーションソフトを指定する
 # （Keyhac のメニューから「内部ログ」を ON にすると processname や classname を確認することができます）
-fc.not_emacs_target    += []
+fc.not_emacs_target    += ["explorer.exe", "EXCEL.EXE", "POWERPNT.EXE"]
 
 # IME の切り替え“のみをしたい”アプリケーションソフトを指定する
 # （指定できるアプリケーションソフトは、not_emacs_target で（除外）指定したものからのみとなります）
@@ -90,7 +90,7 @@ fc.use_ime_status_balloon = True
 # IME をトグルで切り替えるキーを指定する（複数指定可）
 fc.toggle_input_method_key = []
 fc.toggle_input_method_key += ["C-Yen"]
-fc.toggle_input_method_key += ["C-o"]
+# fc.toggle_input_method_key += ["C-o"]
 # fc.toggle_input_method_key += ["O-LAlt"]
 
 #---------------------------------------------------------------------------------------------------
@@ -240,13 +240,13 @@ if 1:
     #                      ]
 
     # fc.vscode_prefix_key = [["C-;", "C-A-;"]]
-    fc.use_ctrl_atmark_for_mark = False
+    fc.use_ctrl_atmark_for_mark = True
     fc.use_direct_input_in_vscode_terminal = False
     fc.esc_mode_in_keyboard_quit = 1
 
     # VSCode Extension 用のキーの設定を行う
     fc.vscode_dired = False
-    fc.vscode_recenter = False
+    fc.vscode_recenter = True
     fc.vscode_occur = False
     fc.vscode_quick_select = True
     fc.vscode_input_sequence = True
@@ -333,7 +333,7 @@ if 0:
 # --------------------------------------------------------------------------------------------------
 
 # 半角と全角の入力を間違えた際、入力モードの切り替えと入力文字の変換を行う
-if 0:
+if 1:
     exec(readConfigExtension(r"zenkaku_hankaku\config.py"), dict(globals(), **locals()))
 
 # --------------------------------------------------------------------------------------------------
